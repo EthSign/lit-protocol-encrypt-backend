@@ -18,5 +18,5 @@ const limiter = rateLimit({
 
 const router = express.Router();
 
-router.route("/").post(litController);
+router.route("/").post(limiter, litController);
 export default router;

@@ -2,8 +2,11 @@ import { z } from "zod";
 
 export const litSchema = z.object({
   body: z.object({
-    message: z.string({
-      required_error: "message is required"
+    ciphertext: z.string({
+      required_error: "ciphertext is required"
+    }),
+    dataToEncryptHash: z.string({
+      required_error: "dataToEncryptHash is required"
     })
   })
 });
