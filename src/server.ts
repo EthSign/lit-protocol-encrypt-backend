@@ -61,6 +61,9 @@ export class Lit {
 
     await contractClient.connect();
 
+    // Note that if your network is `datil-dev`, you do not need a capacity credit NFT
+    // or a capacity delegation auth sig. The following code section is added for
+    // compatibility on the `datil-test` and `datil` networks.
     const { capacityTokenIdStr } = await contractClient.mintCapacityCreditsNFT({
       // requestsPerKilosecond: 80,
       requestsPerDay: 50,
